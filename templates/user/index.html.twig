@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block body %}
+
+
+    <div class="block mb-20">
+        <h1 class="pb-20">Page de profil</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center mb-20">
+            <h2 class="pb-20">{{ app.user.fullName }}</h2>
+            <img src="{{ app.user.picture }}" class="avatar-exlg">
+        </div>
+
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button class="btn btn-primary">Update</button>
+        {{ form_end(form) }}
+    </div>
+
+
+{% endblock %}
